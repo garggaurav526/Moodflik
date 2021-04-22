@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyleSheet, Text, View, Image, Dimensions, ScrollView } from 'react-native'
+import React, { Component, useRef, useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Image, Dimensions,DrawerLayoutAndroid, ScrollView } from 'react-native'
 import { Picker } from '@react-native-picker/picker'
 
 import Title from '../components/Title'
@@ -8,13 +8,26 @@ import CustomButton from '../components/CustomButton'
 import { globalColors, globalSpaces, globalStyles, globalHeadingFont, globalFontFamily } from '../globals/theme'
 import CustomInput from '../components/CustomInput'
 import InputText from '../components/inputText/inputText'
+import NavigationView from "../components/NavigationView";
+import Header from '../components/Header';
+import BottomMenu from '../components/BottomMenu';
 
 const { width, height } = Dimensions.get('window');
 const vw = Dimensions.get('window').width / 100;
 const vh = Dimensions.get('window').height / 100;
 
-export default function ProfileSetup({navigation}) {
+export default function ProfileSetup(props) {
+    const drawer = useRef(null);
     return (
+        <DrawerLayoutAndroid
+            ref={drawer}
+            drawerWidth={300}
+            drawerPosition={'right'}
+            renderNavigationView={NavigationView}
+        >
+            <Header
+                navigation={props.navigation}
+            />
         <ScrollView style={styles.main}>
             <View style={styles.container}>
                 <View style={styles.ProfileSetup}>
@@ -127,7 +140,7 @@ export default function ProfileSetup({navigation}) {
                         <Text style={[styles.remaining_txt, { textAlign: 'right', bottom: 20 }]}>(50 max)</Text>
                     </View>
                 </View>
-                <View style={{marginBottom:20}}>
+                {/* <View style={{marginBottom:20}}>
                     <CustomButton text="Favourites" enabled={true} btnAction={() => navigation.navigate('Favourites')} btnWidth={70} />
                 </View>
                 <View style={{marginBottom:20}}>
@@ -135,9 +148,13 @@ export default function ProfileSetup({navigation}) {
                 </View>
                 <View style={{marginBottom:20}}>
                     <CustomButton text="Forgot Password" enabled={true} btnAction={() => navigation.navigate('ForgotPassword')} btnWidth={70} />
-                </View>
+                </View> */}
             </View>
         </ScrollView>
+        <BottomMenu
+                navigation={props.navigation}
+            />
+        </DrawerLayoutAndroid>
     )
 }
 

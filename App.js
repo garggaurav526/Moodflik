@@ -40,7 +40,6 @@ const AppStack = createStackNavigator(
     ProfileSetup: ProfileSetup,
     Favourites:Favourites,
     ProfileSetting:ProfileSetting,
-    ForgotPassword:ForgotPassword
     // Cart: Cart,
     // Notifications: Notifications,
     // Profile: Profile,
@@ -52,8 +51,8 @@ const AppStack = createStackNavigator(
   },
   {
     defaultNavigationOptions: {
-      headerShown: false,
-      title:''
+      title: '',
+      headerShown: false
     }
   }
 );
@@ -62,7 +61,7 @@ const AuthStack = createStackNavigator(
     Landing: Landing,
     Login: Login,
     SignUp: SignUp, 
-    ForgetPassword: ForgetPassword 
+    ForgotPassword: ForgotPassword 
   },
   {
     defaultNavigationOptions: {

@@ -19,11 +19,11 @@ export default function BottomMenu({ navigation,action, activeScreen, cartItems 
 
     const handleScreen = (screen) => {
         // action && action(false)
-        // navigation.navigate(screen,{
-        //     refreshPage:{
-        //         refresh : Math.random()
-        //     },
-        // })
+        navigation.navigate(screen,{
+            refreshPage:{
+                refresh : Math.random()
+            },
+        })
     }
     return (
         <View style={styles.bottoMenu}>
@@ -34,13 +34,13 @@ export default function BottomMenu({ navigation,action, activeScreen, cartItems 
                         <Text style={{ color: activeScreen == "Order" ? '#f04c4c' : '#fff' }}>Home</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => handleScreen("Home")}>
+                <TouchableOpacity onPress={() => handleScreen("Favourites")}>
                     <View>
-                        <FeatherIcon name="heart" style={{ width: '100%', textAlign: 'center', fontSize: RFPercentage(3), marginRight: 5, color: activeScreen == "Order" ? '#f04c4c' : '#fff' }} />
+                        <Icon name={activeScreen == "Favourites"?'heart':'heart-outline'} style={{ width: '100%', textAlign: 'center', fontSize: RFPercentage(3), marginRight: 5, color: activeScreen == "Order" ? '#f04c4c' : '#fff' }} />
                         <Text style={{ color: activeScreen == "Order" ? '#f04c4c' : '#fff' }}>Favourites</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => handleScreen("Home")}>
+                <TouchableOpacity onPress={() => handleScreen("CreatePost")}>
                     <View>
                         <FeatherIcon name="plus" style={{ width: '100%', textAlign: 'center', fontSize: RFPercentage(3), marginRight: 5, color: activeScreen == "Order" ? '#f04c4c' : '#fff' }} />
                         <Text style={{ color: activeScreen == "Order" ? '#f04c4c' : '#fff' }}>Post</Text>
@@ -48,11 +48,11 @@ export default function BottomMenu({ navigation,action, activeScreen, cartItems 
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => handleScreen("Notifications")}>
                     <View>
-                        <FeatherIcon name="bell" style={{ width: '100%', textAlign: 'center', fontSize: RFPercentage(3), marginRight: 5, color: activeScreen == "Notifications" ? '#f04c4c' : '#fff' }} />
+                        <Icon name={activeScreen == "Notifications"?'notifications':'notifications-outline'} style={{ width: '100%', textAlign: 'center', fontSize: RFPercentage(3), marginRight: 5, color: activeScreen == "Notifications" ? '#f04c4c' : '#fff' }} />
                         <Text style={{ color: activeScreen == "Notifications" ? '#f04c4c' : '#fff' }}>Notifications</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => handleScreen("Profile")}>
+                <TouchableOpacity onPress={() => handleScreen("ProfileSetting")}>
                     <View>
                         <View style={{flexDirection:'row',justifyContent:'center'}}>
                             <View style={[styles.img,{height:Platform.OS === 'ios' ? 25 : 23,width:Platform.OS === 'ios' ? 25 : 23}]}>

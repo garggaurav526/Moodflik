@@ -29,7 +29,7 @@ export default function Login({ navigation }) {
                             <TouchableOpacity onPress={()=>navigation.navigate('ForgetPassword')}>
                                 <Text style={{fontSize:RFPercentage(2.5),textDecorationStyle:'solid',textDecorationLine:'underline',textAlign:'center'}}>Forgot Password ?</Text>
                             </TouchableOpacity>
-                            <CustomButton text="Confirm Sign In" enabled={true} btnAction={() => navigation.navigate('CreatePost')} btnWidth={60} />
+                            <CustomButton text="Confirm Sign In" enabled={true} btnAction={() => navigation.navigate('Home')} btnWidth={60} />
                         </View>
                     </View>
                 </View>

@@ -5,7 +5,7 @@ import { Picker } from '@react-native-picker/picker'
 import Title from '../components/Title'
 import CustomButton from '../components/CustomButton'
 
-import { globalColors, globalSpaces, globalStyles, globalHeadingFont, globalFontFamily } from '../../globals/theme'
+import { globalColors, globalSpaces, globalStyles, globalHeadingFont, globalFontFamily } from '../globals/theme'
 import CustomInput from '../components/CustomInput'
 import InputText from '../components/inputText/inputText'
 
