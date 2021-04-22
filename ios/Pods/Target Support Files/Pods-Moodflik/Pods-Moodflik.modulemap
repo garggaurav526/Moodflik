@@ -1,0 +1,6 @@
+module Pods_Moodflik {
+  umbrella header "Pods-Moodflik-umbrella.h"
+
+  export *
+  module * { export * }
+}

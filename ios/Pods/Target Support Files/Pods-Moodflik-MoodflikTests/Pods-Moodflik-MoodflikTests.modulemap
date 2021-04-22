@@ -1,0 +1,6 @@
+module Pods_Moodflik_MoodflikTests {
+  umbrella header "Pods-Moodflik-MoodflikTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
