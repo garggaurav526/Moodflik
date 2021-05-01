@@ -9,10 +9,7 @@ export default function NavigationView() {
     return (
         <View style={[styles.container, styles.navigationContainer]}>
             <Text style={styles.paragraph}>I'm in the Drawer!</Text>
-            <Button
-                title="Close drawer"
-                onPress={() => drawer.current.closeDrawer()}
-            />
+            
         </View>
     )
 }

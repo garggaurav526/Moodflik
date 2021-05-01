@@ -19,15 +19,7 @@ const vh = Dimensions.get('window').height / 100;
 export default function ProfileSetup(props) {
     const drawer = useRef(null);
     return (
-        <DrawerLayoutAndroid
-            ref={drawer}
-            drawerWidth={300}
-            drawerPosition={'right'}
-            renderNavigationView={NavigationView}
-        >
-            <Header
-                navigation={props.navigation}
-            />
+        <>
         <ScrollView style={styles.main}>
             <View style={styles.container}>
                 <View style={styles.ProfileSetup}>
@@ -151,10 +143,7 @@ export default function ProfileSetup(props) {
                 </View> */}
             </View>
         </ScrollView>
-        <BottomMenu
-                navigation={props.navigation}
-            />
-        </DrawerLayoutAndroid>
+        </>
     )
 }
 
