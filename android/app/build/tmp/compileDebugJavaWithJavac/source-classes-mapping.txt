@@ -1,8 +1,8 @@
 com/moodflik/MainApplication.java
  com.moodflik.MainApplication
  com.moodflik.MainApplication$1
-com/facebook/react/PackageList.java
- com.facebook.react.PackageList
+com/moodflik/MainActivity.java
+ com.moodflik.MainActivity
 com/moodflik/BuildConfig.java
  com.moodflik.BuildConfig
 com/moodflik/ReactNativeFlipper.java
@@ -10,5 +10,5 @@ com/moodflik/ReactNativeFlipper.java
  com.moodflik.ReactNativeFlipper$1
  com.moodflik.ReactNativeFlipper$2
  com.moodflik.ReactNativeFlipper$2$1
-com/moodflik/MainActivity.java
- com.moodflik.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

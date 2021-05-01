@@ -23,15 +23,7 @@ export default function Favourites(props) {
 
 
     return (
-        <DrawerLayoutAndroid
-            ref={drawer}
-            drawerWidth={300}
-            drawerPosition={'right'}
-            renderNavigationView={NavigationView}
-        >
-            <Header
-                navigation={props.navigation}
-            />
+        <>
             <ScrollView>
                 <View style={styles.main}>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -55,7 +47,7 @@ export default function Favourites(props) {
                 navigation={props.navigation}
                 activeScreen="Favourites"
             />
-        </DrawerLayoutAndroid>
+        </>
     )
 }
 

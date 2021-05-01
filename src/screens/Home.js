@@ -8,6 +8,7 @@ import CustomButton from "../components/CustomButton";
 import Icon from 'react-native-vector-icons/AntDesign';
 import Like from "../components/Like";
 import Dislike from "../components/Dislike";
+import DrawerMenu from "../components/DrawerMenu";
 const { width, height } = Dimensions.get('window');
 
 const vw = Dimensions.get('window').width / 100;
@@ -19,16 +20,9 @@ export default function Home(props) {
     const [likeSection, setLikeSection] = useState(true);
     const [dislikesCount, setDislikesCount] = useState(0);
 
-    return (
-        <DrawerLayoutAndroid
-            ref={drawer}
-            drawerWidth={300}
-            drawerPosition={'right'}
-            renderNavigationView={NavigationView}
-        >
-            <Header
-                navigation={props.navigation}
-            />
+    console.log(drawer);
+
+    return (<>
             <ScrollView>
             <View style={styles.main}>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -52,12 +46,12 @@ export default function Home(props) {
                 navigation={props.navigation}
                 activeScreen="Home"
             />
-        </DrawerLayoutAndroid>
+        </>
     )
 }
 
 const styles = StyleSheet.create({
     main: {
-        paddingHorizontal: 5
+        paddingHorizontal: 5,
     }
 })

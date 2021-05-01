@@ -58,16 +58,7 @@ export default function CreatePost(props) {
         // });
     }
 
-    return (
-        <DrawerLayoutAndroid
-            ref={drawer}
-            drawerWidth={300}
-            drawerPosition={'right'}
-            renderNavigationView={NavigationView}
-        >
-            <Header
-                navigation={props.navigation}
-            />
+    return (<>
             <ScrollView style={styles.main}>
                 {isLoader &&
                     <Loader />
@@ -107,7 +98,7 @@ export default function CreatePost(props) {
             <BottomMenu
                 navigation={props.navigation}
             />
-        </DrawerLayoutAndroid>
+            </>
     )
 }
 

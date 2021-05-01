@@ -52,7 +52,7 @@ export default function BottomMenu({ navigation,action, activeScreen, cartItems 
                         <Text style={{ color: activeScreen == "Notifications" ? '#f04c4c' : '#fff' }}>Notifications</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => handleScreen("ProfileSetting")}>
+                <TouchableOpacity onPress={() => handleScreen("Profile")}>
                     <View>
                         <View style={{flexDirection:'row',justifyContent:'center'}}>
                             <View style={[styles.img,{height:Platform.OS === 'ios' ? 25 : 23,width:Platform.OS === 'ios' ? 25 : 23}]}>

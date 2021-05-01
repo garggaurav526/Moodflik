@@ -21,15 +21,7 @@ export default function ProfileSetting(props) {
     const drawer = useRef(null);
 
     return (
-        <DrawerLayoutAndroid
-            ref={drawer}
-            drawerWidth={300}
-            drawerPosition={'right'}
-            renderNavigationView={NavigationView}
-        >
-            <Header
-                navigation={props.navigation}
-            />
+        <>
         <ScrollView style={styles.main}>
             <View style={styles.container}>
                 <View style={styles.ProfileSetup}>
@@ -150,10 +142,7 @@ export default function ProfileSetting(props) {
                 </View>
             </View>
         </ScrollView>
-        <BottomMenu
-                navigation={props.navigation}
-            />
-        </DrawerLayoutAndroid>
+        </>
     )
 }
 
